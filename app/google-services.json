@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572968344625",
+    "project_id": "customerways",
+    "storage_bucket": "customerways.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572968344625:android:1539b764ee17410da74910",
+        "android_client_info": {
+          "package_name": "com.app.customerways"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOO61mbw4XWOzBGICNcBbKGvO_PjS_CEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

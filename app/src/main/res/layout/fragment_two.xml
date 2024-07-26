@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.Trip.Fragment.twoFragment">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/llLocation"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:weightSum="3.3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/divider1"
+                    app:dividerThickness="@dimen/_1sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:dividerColor="@color/grey"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/_16sdp"
+                    android:background="@drawable/round_shape"
+                    />
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    app:dividerColor="@color/grey"
+                    app:dividerThickness="@dimen/_1sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_16sdp"
+                    android:background="@drawable/round_shape_stroke"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    app:dividerColor="@color/grey"
+                    app:dividerThickness="@dimen/_1sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_16sdp"
+                    android:background="@drawable/round_shape_stroke"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_weight="0.3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_16sdp"
+                    android:background="@drawable/round_shape_stroke"
+                    />
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="?attr/myTextColor"
+            />
+
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text1"
+            android:hint="Enter Title"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="@dimen/_10sdp"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:singleLine="true"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="Description"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="?attr/myTextColor"
+            />
+
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text1"
+            android:hint="Enter Description"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="@dimen/_10sdp"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:singleLine="true"
+            android:inputType="text"
+            />
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

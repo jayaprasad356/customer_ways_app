@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navHome"
+        android:icon="@drawable/home_ic_new"
+        android:title="Home" />
+
+
+<!--    <item-->
+<!--        android:id="@+id/navIntersts"-->
+<!--        android:icon="@drawable/people_ic_new"-->
+<!--        android:title="Customer" />-->
+
+    <item
+        android:id="@+id/navExplore"
+        android:icon="@drawable/add_ic_new"
+        android:title="Add" />
+
+
+    <item
+        android:id="@+id/navMessages"
+        android:icon="@drawable/chat_ic_new"
+        android:title="Chat" />
+
+
+    <item
+        android:id="@+id/navNotification"
+        android:icon="@drawable/user_ic_new"
+        android:title="My Profile" />
+
+
+
+</menu>

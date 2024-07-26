@@ -1,0 +1,10 @@
+<!-- gradient_button.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="#CC9901"
+        android:centerColor="#A68A10"
+        android:endColor="#5B6D2D"
+       />
+    <corners android:radius="8dp" />
+</shape>

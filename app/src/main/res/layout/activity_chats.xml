@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ChatsActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_14sdp">
+
+            <ImageView
+                android:backgroundTint="?attr/iconColor"
+                android:layout_centerVertical="true"
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:background="@drawable/arrow_left"
+                />
+
+
+
+            <RelativeLayout
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:id="@+id/rlProfile"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/IV_online_status"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:background="@drawable/online"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/rlProfile"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="?attr/myTextColor"
+                    android:textSize="@dimen/_16sdp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+
+                <TextView
+                    android:id="@+id/typingStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/primary"
+                    />
+
+                <TextView
+                    android:id="@+id/tvLastSeen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/primary"
+                    />
+
+            </LinearLayout>
+
+
+            <ImageButton
+            android:backgroundTint="?attr/iconColor"
+                android:id="@+id/ivMore"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/more_ic"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="onMoreOptionsClicked" />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlToolbar"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:textAlignment="center"
+            android:background="@drawable/custom_button_background"
+            android:padding="@dimen/_5sdp"
+            android:text="" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_above="@+id/llMessage"
+            android:layout_below="@+id/tvDate"
+            android:id="@+id/RVChats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:padding="8dp" />
+
+
+        <RelativeLayout
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/llMessage"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- EditText for typing new message -->
+            <EditText
+                android:layout_toLeftOf="@+id/rlSend"
+                android:id="@+id/messageEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/edit_text_messages_background"
+                android:hint="Message"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:padding="12dp"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:scrollbars="vertical" />
+
+            <RelativeLayout
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/rlSend"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/edit_text_messages_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageButton
+                    android:id="@+id/sendButton"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:background="@drawable/sent_ic"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

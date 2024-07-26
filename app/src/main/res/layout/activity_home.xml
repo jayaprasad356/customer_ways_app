@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/coordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/rltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/logo"
+            />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivProfile"
+            android:id="@+id/ivTitle"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/tittle_img"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBecomeSeller"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_height="@dimen/_30sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="@dimen/_4sdp"
+            app:backgroundTint="@null"
+            android:background="@drawable/gradient_button"
+            android:text="Become an seller"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_8sdp"
+            />
+
+
+
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/civProfile"-->
+<!--            android:layout_width="@dimen/_38sdp"-->
+<!--            android:layout_height="@dimen/_38sdp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            app:civ_border_width="2dp"-->
+<!--            app:civ_border_color="@color/primary"-->
+<!--            />-->
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_below="@+id/rltoolbar"
+        android:layout_above="@+id/bottomNavigationView"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@color/transparent"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconTint="@drawable/bottom_navigation_item_selector"
+            app:itemTextColor="@drawable/bottom_navigation_item_selector"
+            android:elevation="0dp"
+            app:elevation="0dp" />
+
+
+
+
+
+</RelativeLayout>

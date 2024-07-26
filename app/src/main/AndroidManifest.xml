@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".helper.ApiConfig"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:installLocation="internalOnly"
+        android:label="@string/app_name"
+        android:launchMode="singleTop"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Paring"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".gateway.MainActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Activity.SeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SelfiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Trip.TripCompletedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TermsconditionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PrivacypolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.spinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MytripsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.GoogleLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.BecomeSellerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.InterestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SpinwheelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PurchasepointActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.FreePointsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Stage4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Stage3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Stage2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Stage1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DeactivateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CustomerSupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.IdverficationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.StorepointsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProfileinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProfileViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Trip.StarttripActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProfileDetailsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.OtpActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.MobileLoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.WelcomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.InviteFriendsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.SplashscreenActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Paring">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- Theme is optional and only needed if default theme has no action bar. -->
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.app.customerways.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- Custom style for a button -->
+
+    <!-- Custom style for calendar date -->
+
+    <!-- Custom style for calendar week day -->
+
+    <!-- Custom style for calendar view week custom text -->
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Custom CalendarView style -->
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/primary</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <!-- Custom style for CalendarView date custom text -->
+    <style name="CalenderViewDateCustomText" parent="Theme.AppCompat">
+        <item name="android:textColor">@drawable/calender_date_selector</item>
+    </style>
+
+    <!-- Theme overlay for TextInputEditText Outlined style -->
+    <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined" parent="">
+        <item name="colorControlActivated">@color/primary</item>
+        <item name="android:enabled">@color/primary</item>
+
+
+    </style>
+
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/textinput_box_stroke_color</item>
+        <item name="hintTextColor">@color/textinput_hint_text_color</item>
+        <item name="colorControlActivated">@color/primary</item>
+    </style>
+
+    <!-- Custom overlay style for TextInputEditText -->
+    <style name="CustomTextInputEditText" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorAccent">@color/textinput_hint_text_color</item>
+        <item name="colorControlActivated">@color/primary</item>
+
+    </style>
+
+</resources>
