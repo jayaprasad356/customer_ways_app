@@ -59,7 +59,7 @@ class BecomeSellerActivity : BaseActivity() {
             }
         })
 
-        profession_list()
+
         binding.tvSkip.setOnClickListener {
             val intent = Intent(activity, HomeActivity::class.java)
             startActivity(intent)
@@ -217,30 +217,5 @@ class BecomeSellerActivity : BaseActivity() {
         }, activity, Constant.UPDATE_USERS, params, true, 1)
     }
 
-    private fun profession_list() {
-        val params: MutableMap<String, String> = HashMap()
-        ApiConfig.RequestToVolley({ result, response ->
-            if (result) {
-                try {
-                    val jsonObject: JSONObject = JSONObject(response)
-                    if (jsonObject.getBoolean("success")) {
-                        val jsonArray = jsonObject.getJSONArray("data")
-                        // Clear previous data
-                        professions = mutableListOf()
-                        for (i in 0 until jsonArray.length()) {
-                            val professionObject = jsonArray.getJSONObject(i)
-                            val profession = professionObject.getString("profession")
-                            professions += profession
-                        }
-                        // Now professions list is populated, you can use it wherever needed
-                        //  Toast.makeText(activity, jsonObject.getString("message"), Toast.LENGTH_SHORT).show()
-                    } else {
-                        Toast.makeText(activity, jsonObject.getString("message"), Toast.LENGTH_SHORT).show()
-                    }
-                } catch (e: JSONException) {
-                    e.printStackTrace()
-                }
-            }
-        }, activity, Constant.PROFESSION_LIST, params, true, 1)
-    }
+
 }

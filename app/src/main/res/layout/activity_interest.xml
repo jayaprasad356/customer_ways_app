@@ -35,10 +35,21 @@
 
     </RelativeLayout>
 
-    <!-- This container will host the InterestFragment -->
-    <FrameLayout
-        android:id="@+id/fragment_container"
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@+id/rlToolbar"
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvConnectList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 </RelativeLayout>
