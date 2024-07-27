@@ -13,6 +13,7 @@ public class Constant {
     public static final String REGISTER = BaseUrl + "register";
     public static final String PROFESSION_LIST = BaseUrl + "profession_list";
     public static final String UPDATE_USERS = BaseUrl + "update_users";
+    public static final String ADD_SELLERS = BaseUrl + "add_sellers";
     public static final String CHECK_MOBILE = BaseUrl + "check_mobile";
     public static final String CHECK_EMAIL = BaseUrl + "check_email";
     public static final String USERDETAILS = BaseUrl + "userdetails";
@@ -83,6 +84,7 @@ public class Constant {
     public static final String TXN_ID = "txn_id";
     public static final String MARKET_ID = "market_id";
     public static final String DATE = "date";
+    public static final String SELLER_STATUS = "seller_status";
 
     public static final String REMOVE_FROM_CART = BaseUrl + "booklist/delete-cart";
     public static final String ORDER = BaseUrl + "order";
@@ -122,6 +124,7 @@ public class Constant {
     public static final String FRIEND = "friend";
 
     public static final String NAME = "name";
+    public static final String YOUR_NAME = "your_name";
     public static final String CHAT_STATUS = "chat_status";
     public static final String UNIQUE_NAME = "unique_name";
     public static final String INSTAGRAM_LINK = "instagram_link";
@@ -129,10 +132,13 @@ public class Constant {
     public static final String SEARCH = "search";
     public static final String EMAIL = "email";
     public static final String AGE = "age";
+    public static final String STORE_NAME = "store_name";
     public static final String GENDER = "gender";
     public static final String PROFESSION = "profession";
+    public static final String CATEGORY = "category";
     public static final String PROFESSION_ID = "profession_id";
     public static final String STATE = "state";
+    public static final String STORE_ADDRESS = "store_address";
     public static final String CITY = "city";
     public static final String INTRODUCTION = "introduction";
     public static final String REFER_CODE = "refer_code";

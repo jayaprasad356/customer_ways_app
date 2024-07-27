@@ -14,6 +14,7 @@ import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.FragmentManager
@@ -22,18 +23,14 @@ import com.google.android.material.navigation.NavigationBarView
 import com.app.customerways.Fragment.ExploreFragment
 import com.app.customerways.Fragment.HomeFragment
 import com.app.customerways.Fragment.InterestFragment
-import com.app.customerways.Fragment.LikesFragment
 import com.app.customerways.Fragment.MessagesFragment
-import com.app.customerways.Fragment.NotificationFragment
 import com.app.customerways.Fragment.ProfileFragment
 import com.app.customerways.Fragment.TripFragment
-import com.app.customerways.Fragment.ViewFragment
 import com.app.customerways.R
 import com.app.customerways.databinding.ActivityHomeBinding
 import com.app.customerways.helper.ApiConfig
 import com.app.customerways.helper.Constant
 import com.app.customerways.helper.Session
-import com.bumptech.glide.Glide
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.onesignal.OneSignal
@@ -83,7 +80,11 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
         initializeOneSignal()
         initializeZohoSalesIQ()
         setupBottomNavigation()
-        loadBecomeSeller()
+
+        val sellerStatus = "3"
+        updateBecomeSellerButtonVisibility(sellerStatus)
+
+        loadBecomeSeller(sellerStatus)
 //        loadProfilePicture()
 
         getLocation()
@@ -115,6 +116,14 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
         interestFragment = InterestFragment()
 
         fm.beginTransaction().replace(R.id.fragment_container, homeFragment).commit()
+    }
+
+    private fun updateBecomeSellerButtonVisibility(sellerStatus: String) {
+        if (sellerStatus == "0") {
+            binding.btnBecomeSeller.visibility = View.VISIBLE
+        } else if (sellerStatus == "1") {
+            binding.btnBecomeSeller.visibility = View.GONE
+        }
     }
 
     private fun initializeOneSignal() {
@@ -157,11 +166,21 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
 //        }
 //    }
 
-    private fun loadBecomeSeller() {
+    private fun loadBecomeSeller(sellerStatus : String) {
 
         binding.btnBecomeSeller.setOnClickListener {
-            val intent = Intent(activity, BecomeSellerActivity::class.java)
-            startActivity(intent)
+            if (sellerStatus == "0") {
+                val intent = Intent(activity, BecomeSellerActivity::class.java)
+                startActivity(intent)
+            } else if (sellerStatus == "2") {
+                val intent = Intent(activity, SellerStatusActivity::class.java)
+                intent.putExtra("sellerStatus", sellerStatus)
+                startActivity(intent)
+            } else if (sellerStatus == "3") {
+                val intent = Intent(activity, SellerStatusActivity::class.java)
+                intent.putExtra("sellerStatus", sellerStatus)
+                startActivity(intent)
+            }
         }
     }
 
@@ -338,7 +357,7 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
                         session.setData(Constant.ADD_FRIEND_NOTIFY, jsonobj.getString(Constant.ADD_FRIEND_NOTIFY))
                         session.setData(Constant.VIEW_NOTIFY, jsonobj.getString(Constant.VIEW_NOTIFY))
                         session.setData(Constant.PROFILE_VERIFIED, jsonobj.getString(Constant.PROFILE_VERIFIED))
-
+                        session.setData(Constant.SELLER_STATUS, jsonobj.getString(Constant.SELLER_STATUS))
 
 
                     } else {

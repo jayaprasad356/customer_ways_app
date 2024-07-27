@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlgr"
+        android:padding="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:backgroundTint="?attr/iconColor"
+            android:layout_centerVertical="true"
+            android:id="@+id/ibBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:background="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/tvSellerStatus"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_14sdp"
+            android:layout_toRightOf="@+id/ibBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seller status"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="?attr/myTextColor"
+            android:fontFamily="@font/poppins_medium"
+            />
+
+        <TextView
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:id="@+id/tvSkip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Skip"
+            android:gravity="right"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_16sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainContent"
+        android:layout_below="@id/rlgr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvStatusMessage"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="?attr/myTextColor"
+        android:fontFamily="@font/poppins_medium" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

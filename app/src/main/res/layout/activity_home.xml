@@ -40,10 +40,11 @@
             android:layout_centerVertical="true"
             android:paddingHorizontal="@dimen/_4sdp"
             app:backgroundTint="@null"
-            android:background="@drawable/gradient_button"
+            android:background="@drawable/gold_gradient_button"
             android:text="Become an seller"
             android:textAllCaps="false"
             android:textSize="@dimen/_8sdp"
+            android:textColor="@color/black"
             />
 
 
