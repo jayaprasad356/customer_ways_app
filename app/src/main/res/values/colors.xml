@@ -10,6 +10,7 @@
     <color name="insta">#F15353</color>
 
     <color name="text_grey">#4D4D4D</color>
+    <color name="grey">#DADADA</color>
     <color name="text_grey_dark">#C5C1C1</color>
     <color name="light_grey">#EAE9E9</color>
 
@@ -17,6 +18,7 @@
     <color name="primary">#3D9546</color>
     <color name="primary_gradient_light">#3D9546</color>
     <color name="primary_light">#E6FFE9</color>
+    <color name="primary_light_dark_mood">#2C2C2C</color>
     <color name="primary_extra_light">#E6FFE9</color>
 
     <color name="inactive">#F19DB6</color>

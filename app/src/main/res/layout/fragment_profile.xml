@@ -190,7 +190,7 @@
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:background="@drawable/corners_bg"
-                    android:backgroundTint="@color/primary_light"
+                    android:backgroundTint="?attr/primaryLightDarkMood"
                     android:padding="@dimen/_10sdp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -455,16 +455,18 @@
 
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/rlSellersOption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
 
 
                 <LinearLayout
+                    android:id="@+id/btnSellersOption"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:background="@drawable/corners_bg"
-                    android:backgroundTint="@color/primary_light"
+                    android:backgroundTint="?attr/primaryLightDarkMood"
                     android:padding="@dimen/_10sdp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -479,6 +481,7 @@
 
 
                         <ImageView
+                            android:id="@+id/ivSPImage"
                             android:backgroundTint="?attr/iconColor"
                             android:layout_width="@dimen/_20sdp"
                             android:layout_height="@dimen/_20sdp"
@@ -487,6 +490,7 @@
 
 
                         <TextView
+                            android:id="@+id/tvSPText"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_50sdp"
                             android:layout_width="match_parent"
@@ -510,6 +514,7 @@
 
 
                         <ImageView
+                            android:id="@+id/ivCImage"
                             android:backgroundTint="?attr/iconColor"
                             android:layout_width="@dimen/_20sdp"
                             android:layout_height="@dimen/_17sdp"
@@ -518,6 +523,7 @@
 
 
                         <TextView
+                            android:id="@+id/tvCText"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_50sdp"
                             android:layout_width="match_parent"
@@ -540,6 +546,7 @@
 
 
                         <ImageView
+                            android:id="@+id/ivVBImage"
                             android:backgroundTint="?attr/iconColor"
                             android:layout_width="@dimen/_20sdp"
                             android:layout_height="@dimen/_20sdp"
@@ -548,6 +555,7 @@
 
 
                         <TextView
+                            android:id="@+id/tvVBText"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_50sdp"
                             android:layout_width="match_parent"
@@ -580,7 +588,7 @@
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:background="@drawable/corners_bg"
-                    android:backgroundTint="@color/primary_light"
+                    android:backgroundTint="?attr/primaryLightDarkMood"
                     android:padding="@dimen/_10sdp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"

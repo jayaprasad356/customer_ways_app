@@ -4,6 +4,7 @@
     <attr name="myTextColor" format="reference|color" />
     <attr name="iconColor" format="reference|color" />
     <attr name="textgrey" format="reference|color" />
+    <attr name="primaryLightDarkMood" format="reference|color" />
 
     <!-- Add more custom attributes as needed -->
 </resources>

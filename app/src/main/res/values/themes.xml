@@ -13,6 +13,7 @@
         <item name="myTextColor">@color/black</item> <!-- Default text color -->
         <item name="iconColor">@color/black</item> <!-- Default text color -->
         <item name="textgrey">@color/text_grey</item>
+        <item name="primaryLightDarkMood">@color/primary_light</item>
 
     </style>
 
@@ -26,6 +27,7 @@
         <item name="myTextColor">@color/white</item> <!-- Text color for dark mode -->
         <item name="iconColor">@color/text_grey_dark</item> <!-- Text color for dark mode -->
         <item name="textgrey">@color/text_grey_dark</item> <!-- Text color for dark mode -->
+        <item name="primaryLightDarkMood">@color/primary_light_dark_mood</item> <!-- Text color for dark mode -->
     </style>
 
 

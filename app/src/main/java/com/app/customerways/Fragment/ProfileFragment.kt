@@ -8,9 +8,11 @@ import android.content.res.ColorStateList
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -81,6 +83,14 @@ class ProfileFragment : Fragment() {
         activity = requireActivity()
         session = Session(activity)
 
+        val sellerStatus = session.getData(Constant.SELLER_STATUS)
+
+        if (sellerStatus == "1") {
+            binding.rlSellersOption.visibility = View.VISIBLE
+        } else {
+            binding.rlSellersOption.visibility = View.GONE
+        }
+
         (activity as HomeActivity).binding.rltoolbar.visibility = View.GONE
 
         binding.ivAddProfile.setOnClickListener {
@@ -150,10 +160,6 @@ class ProfileFragment : Fragment() {
             requireActivity().onBackPressed()
         }
 
-        binding.rlStorepoints.setOnClickListener {
-            showPointsDialog()
-        }
-
         binding.rlDeactiveaccount.setOnClickListener {
             val intent = Intent(activity, DeactivateActivity::class.java)
             startActivity(intent)
@@ -161,23 +167,6 @@ class ProfileFragment : Fragment() {
 
         binding.rlCustomerSupport.setOnClickListener {
             val intent = Intent(activity, CustomerSupportActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.rlCustomersList.setOnClickListener {
-            val intent = Intent(activity, InterestActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.rlVerificationBadge.setOnClickListener {
-            val proof1 = session.getData(Constant.PROOF1)
-            val proof2 = session.getData(Constant.PROOF2)
-
-            val intent = if (proof1 == "1" && proof2 == "1") {
-                Intent(activity, Stage4Activity::class.java)
-            } else {
-                Intent(activity, IdverficationActivity::class.java)
-            }
             startActivity(intent)
         }
 

@@ -347,7 +347,7 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
                         session.setData(Constant.ADD_CUSTOMER_NOTIFY, jsonobj.getString(Constant.ADD_CUSTOMER_NOTIFY))
                         session.setData(Constant.VIEW_NOTIFY, jsonobj.getString(Constant.VIEW_NOTIFY))
                         session.setData(Constant.PROFILE_VERIFIED, jsonobj.getString(Constant.PROFILE_VERIFIED))
-                    session.setData(Constant.SELLER_STATUS, jsonobj.getString(Constant.SELLER_STATUS))
+                        session.setData(Constant.SELLER_STATUS, jsonobj.getString(Constant.SELLER_STATUS))
 
                         Toast.makeText(activity, session.getData(Constant.SELLER_STATUS), Toast.LENGTH_SHORT).show()
 
