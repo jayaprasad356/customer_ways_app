@@ -113,7 +113,7 @@ public class Constant {
     public static final String USER_ID = "user_id";
     public static final String ONLINE_STATUS = "online_status";
     public static final String MESSAGE_NOTIFY = "message_notify";
-    public static final String ADD_FRIEND_NOTIFY = "add_friend_notify";
+    public static final String ADD_CUSTOMER_NOTIFY = "add_customer_notify";
     public static final String VIEW_NOTIFY = "view_notify";
     public static final String TYPE = "type";
     public static final String CHAT_USER_ID = "chat_user_id";

@@ -34,7 +34,7 @@ class NotificationActivity : BaseActivity() {
         if (session.getData(Constant.MESSAGE_NOTIFY).equals("1", ignoreCase = true)) {
             binding.cb1.isChecked = true
         }
-        if (session.getData(Constant.ADD_FRIEND_NOTIFY).equals("1", ignoreCase = true)) {
+        if (session.getData(Constant.ADD_CUSTOMER_NOTIFY).equals("1", ignoreCase = true)) {
             binding.cb2.isChecked = true
         }
         if (session.getData(Constant.VIEW_NOTIFY).equals("1", ignoreCase = true)) {
@@ -56,7 +56,7 @@ class NotificationActivity : BaseActivity() {
         val params: MutableMap<String, String> = HashMap()
         params[Constant.USER_ID] = session.getData(Constant.USER_ID)
         params[Constant.MESSAGE_NOTIFY] = messageNotify
-        params[Constant.ADD_FRIEND_NOTIFY] = addFriendNotify
+        params[Constant.ADD_CUSTOMER_NOTIFY] = addFriendNotify
         params[Constant.VIEW_NOTIFY] = viewNotify
         ApiConfig.RequestToVolley({ result, response ->
             if (result) {
@@ -96,7 +96,7 @@ class NotificationActivity : BaseActivity() {
 
 
                         session.setData(Constant.MESSAGE_NOTIFY, jsonobj.getString(Constant.MESSAGE_NOTIFY))
-                        session.setData(Constant.ADD_FRIEND_NOTIFY, jsonobj.getString(Constant.ADD_FRIEND_NOTIFY))
+                        session.setData(Constant.ADD_CUSTOMER_NOTIFY, jsonobj.getString(Constant.ADD_CUSTOMER_NOTIFY))
                         session.setData(Constant.VIEW_NOTIFY, jsonobj.getString(Constant.VIEW_NOTIFY))
 
 

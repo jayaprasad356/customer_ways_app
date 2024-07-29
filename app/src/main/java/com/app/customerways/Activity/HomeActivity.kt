@@ -81,10 +81,7 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
         initializeZohoSalesIQ()
         setupBottomNavigation()
 
-        val sellerStatus = "3"
-        updateBecomeSellerButtonVisibility(sellerStatus)
 
-        loadBecomeSeller(sellerStatus)
 //        loadProfilePicture()
 
         getLocation()
@@ -336,15 +333,9 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
                         val `object` = JSONObject(response)
                         val jsonobj = `object`.getJSONObject(Constant.DATA)
 
-
                         session.setData(Constant.NAME, jsonobj.getString(Constant.NAME))
                         session.setData(Constant.UNIQUE_NAME, jsonobj.getString(Constant.UNIQUE_NAME))
-                        session.setData(Constant.EMAIL, jsonobj.getString(Constant.EMAIL))
                         session.setData(Constant.AGE, jsonobj.getString(Constant.AGE))
-                        session.setData(Constant.GENDER, jsonobj.getString (Constant.GENDER))
-                        session.setData(Constant.PROFESSION, jsonobj.getString(Constant.PROFESSION))
-                        session.setData(Constant.STATE, jsonobj.getString(Constant.STATE))
-                        session.setData(Constant.CITY, jsonobj.getString(Constant.CITY))
                         session.setData(Constant.PROFILE, jsonobj.getString(Constant.PROFILE))
                         session.setData(Constant.MOBILE, jsonobj.getString(Constant.MOBILE))
                         session.setData(Constant.REFER_CODE, jsonobj.getString(Constant.REFER_CODE))
@@ -352,12 +343,13 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
                         session.setData(Constant.POINTS, jsonobj.getString(Constant.POINTS))
                         session.setData(Constant.VERIFIED, jsonobj.getString(Constant.VERIFIED))
                         session.setData(Constant.ONLINE_STATUS, jsonobj.getString(Constant.ONLINE_STATUS))
-                        session.setData(Constant.INTRODUCTION, jsonobj.getString(Constant.INTRODUCTION))
                         session.setData(Constant.MESSAGE_NOTIFY, jsonobj.getString(Constant.MESSAGE_NOTIFY))
-                        session.setData(Constant.ADD_FRIEND_NOTIFY, jsonobj.getString(Constant.ADD_FRIEND_NOTIFY))
+                        session.setData(Constant.ADD_CUSTOMER_NOTIFY, jsonobj.getString(Constant.ADD_CUSTOMER_NOTIFY))
                         session.setData(Constant.VIEW_NOTIFY, jsonobj.getString(Constant.VIEW_NOTIFY))
                         session.setData(Constant.PROFILE_VERIFIED, jsonobj.getString(Constant.PROFILE_VERIFIED))
-                        session.setData(Constant.SELLER_STATUS, jsonobj.getString(Constant.SELLER_STATUS))
+                    session.setData(Constant.SELLER_STATUS, jsonobj.getString(Constant.SELLER_STATUS))
+
+                        Toast.makeText(activity, session.getData(Constant.SELLER_STATUS), Toast.LENGTH_SHORT).show()
 
 
                     } else {
@@ -375,6 +367,10 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
     override fun onStart() {
         super.onStart()
         userdetails(session.getData(Constant.USER_ID),"1")
+        val sellerStatus = session.getData(Constant.SELLER_STATUS)
+        updateBecomeSellerButtonVisibility(sellerStatus)
+
+        loadBecomeSeller(sellerStatus)
     }
 
     // onstop
