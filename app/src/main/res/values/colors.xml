@@ -21,8 +21,8 @@
     <color name="primary_light_dark_mood">#2C2C2C</color>
     <color name="primary_extra_light">#E6FFE9</color>
 
-    <color name="inactive">#F19DB6</color>
-    <color name="active">#FF5084</color>
+    <color name="inactive">#92E89C</color>
+    <color name="active">#0DAF21</color>
 
 
     <color name="colorPrimary">#3F51B5</color>

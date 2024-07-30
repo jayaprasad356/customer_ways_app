@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Customer ways</string>
 
-    <string name="splash1">"Welcome to our travel community, where every journey begins with a new friendship"</string>
-    <string name="splash2">"Where wanderlust meets companionship - find your perfect travel partner today!"</string>
-    <string name="splash3">"Join a global network of explorers and find your ideal travel buddy."</string>
+    <string name="splash1">"Browse our extensive catalog to find the perfect items for you."</string>
+    <string name="splash2">"Enjoy a seamless checkout process with multiple payment options."</string>
+    <string name="splash3">"Choose convenient delivery or pick-up options to receive your purchase."</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="terms_and_conditions">By continuing you agree to our \n<u>Terms of Service Privacy Policy \nContent Policy</u></string>

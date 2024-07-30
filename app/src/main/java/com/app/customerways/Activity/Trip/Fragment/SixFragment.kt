@@ -46,7 +46,7 @@ class SixFragment : Fragment() {
         session = Session(activity)
 
         (activity as StarttripActivity).binding.tvTitle.visibility = View.INVISIBLE
-        (activity as StarttripActivity).binding.btnNext.text = "Start Trip"
+        (activity as StarttripActivity).binding.btnNext.text = "Submit"
 
         binding.ivAddProof1.setOnClickListener {
             pickImageFromGallery()

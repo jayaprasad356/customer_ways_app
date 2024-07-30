@@ -136,7 +136,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What type of trip are you planning?"
+            android:text="What type of products are you looking for?"
             android:textSize="@dimen/_14sdp"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="?attr/myTextColor"

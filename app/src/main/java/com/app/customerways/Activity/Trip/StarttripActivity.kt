@@ -74,10 +74,10 @@ class StarttripActivity : BaseActivity() {
 //            is FourFragment -> {
 //
 //            }
-            is FiveFragment -> {
-
-
-            }
+//            is FiveFragment -> {
+//
+//
+//            }
             is SixFragment -> {
 
             }
@@ -94,7 +94,6 @@ class StarttripActivity : BaseActivity() {
                 onBackPressed()
                 onResume()
             }
-
             is threeFragment -> {
                 fm.beginTransaction().replace(R.id.frameLayout, oneFragment()).commit()
                 onResume()
@@ -105,13 +104,13 @@ class StarttripActivity : BaseActivity() {
 //                onResume()
 //
 //            }
-            is FiveFragment -> {
-                fm.beginTransaction().replace(R.id.frameLayout, threeFragment()).commit()
-                onResume()
-
-            }
+//            is FiveFragment -> {
+//                fm.beginTransaction().replace(R.id.frameLayout, threeFragment()).commit()
+//                onResume()
+//
+//            }
             is SixFragment -> {
-                fm.beginTransaction().replace(R.id.frameLayout, FiveFragment()).commit()
+                fm.beginTransaction().replace(R.id.frameLayout, threeFragment()).commit()
                 onResume()
 
             }
@@ -127,27 +126,25 @@ class StarttripActivity : BaseActivity() {
                     fm.beginTransaction().replace(R.id.frameLayout, threeFragment()).commit()
                     onResume()
                 } else {
-                    Toast.makeText(this, "Please select a trip plan", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Please select a category", Toast.LENGTH_SHORT).show()
                 }
             }
 
             is threeFragment -> {
                 // call fragment etLocation
-                if ((fragment as threeFragment).binding.etTitle.text.toString().isEmpty() && (fragment as threeFragment).binding.etDescription.text.toString().isEmpty()) {
+                if ((fragment as threeFragment).binding.etTitle.text.toString().isEmpty()) {
                     (fragment as threeFragment).binding.etTitle.error = "Please enter Title"
+                } else if ((fragment as threeFragment).binding.etDescription.text.toString().isEmpty()) {
                     (fragment as threeFragment).binding.etDescription.error = "Please enter Description"
-                }
-                else {
-                    session.setData(Constant.PRODUCT_TITLE, (fragment as threeFragment).binding.etTitle.text.toString())
-                  session.setData(Constant.PRODUCT_DESCRIPTION, (fragment as threeFragment).binding.etDescription.text.toString())
+                } else {
+                     session.setData(Constant.PRODUCT_TITLE, (fragment as threeFragment).binding.etTitle.text.toString())
+                    session.setData(Constant.PRODUCT_DESCRIPTION, (fragment as threeFragment).binding.etDescription.text.toString())
 
                     fm.beginTransaction().replace(R.id.frameLayout, SixFragment()).commit()
                     onResume()
                 }
-
-
-
             }
+
 //            is FourFragment -> {
 //                if ((fragment as FourFragment).binding.edStartDate.text.toString().isEmpty()) {
 //                    (fragment as FourFragment).binding.edStartDate.error = "Please enter start date"
@@ -161,9 +158,10 @@ class StarttripActivity : BaseActivity() {
 //                }
 //
 //            }
-            is FiveFragment -> {
-                fm.beginTransaction().replace(R.id.frameLayout, SixFragment()).commit()
-                onResume()
+
+//            is FiveFragment -> {
+//                fm.beginTransaction().replace(R.id.frameLayout, SixFragment()).commit()
+//                onResume()
 //                if ((fragment as FiveFragment).binding.etTripName.text.toString().isEmpty()) {
 //                    (fragment as FiveFragment).binding.etTripName.error = "Please enter trip name"
 //                }else if ((fragment as FiveFragment).binding.etDescription.text.toString().isEmpty()) {
@@ -175,9 +173,8 @@ class StarttripActivity : BaseActivity() {
 //                    fm.beginTransaction().replace(R.id.frameLayout, SixFragment()).commit()
 //                    onResume()
 //                }
+//            }
 
-
-            }
             is SixFragment -> {
 
 
@@ -185,8 +182,8 @@ class StarttripActivity : BaseActivity() {
                           (fragment as SixFragment).addtrip()
 
             }
-
-        } }
+        }
+    }
 
 
 

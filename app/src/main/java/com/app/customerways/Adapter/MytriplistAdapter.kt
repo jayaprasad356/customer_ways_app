@@ -98,7 +98,7 @@ class MytriplistAdapter(
         holder.llDelete.setOnClickListener {
             AlertDialog.Builder(activity)
                 .setTitle("Delete product")
-                .setMessage("Are you sure you want to delete this trip?")
+                .setMessage("Are you sure you want to delete this product?")
                 .setPositiveButton("Yes") { dialog, which ->
                     deleteTrip(report.id)
                 }

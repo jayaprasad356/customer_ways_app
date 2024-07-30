@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/trip_img"
+            android:background="@drawable/ecommerce_bg"
             android:scaleType="fitXY"
             >
         </ImageView>
@@ -31,7 +31,7 @@
             android:layout_marginTop="@dimen/_100sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Adventure awaits just beyond the horizon."
+            android:text=""
             android:textSize="@dimen/_18sdp"
             android:fontFamily="@font/poppins_bold"
             android:textColor="#282B38"

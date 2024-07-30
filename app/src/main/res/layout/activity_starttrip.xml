@@ -41,7 +41,7 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Start a Trip"
+                android:text="Post a prodect"
                 android:textSize="@dimen/_22sdp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/primary"
