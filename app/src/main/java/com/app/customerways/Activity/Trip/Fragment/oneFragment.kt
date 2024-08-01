@@ -50,7 +50,7 @@ class oneFragment : Fragment() {
         list.add(R.drawable.clothing.toString())
         list.add(R.drawable.electonic.toString())
         list.add(R.drawable.jewells.toString())
-        list.add(R.drawable.shoes_img.toString())
+        list.add(R.drawable.other_img.toString())
 
         val adapter = TripAdapter(activity, list)
         binding.rvtrip.adapter = adapter

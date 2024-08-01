@@ -38,7 +38,9 @@ class MobileLoginActivity : BaseActivity() {
             }
             else{
                 session.setData(Constant.MOBILE,binding.etMobileNumber.text.toString())
-                login()
+                val intent = Intent(activity,OtpActivity::class.java)
+                startActivity(intent)
+                finish()
             }
 
 
@@ -74,13 +76,8 @@ class MobileLoginActivity : BaseActivity() {
                             session.setData(Constant.PROFILE, jsonobj.getString(Constant.PROFILE))
                             session.setData(Constant.MOBILE, jsonobj.getString(Constant.MOBILE))
                             session.setData(Constant.REFER_CODE, jsonobj.getString(Constant.REFER_CODE))
-                            val intent = Intent(activity,OtpActivity::class.java)
+                            val intent = Intent(activity,HomeActivity::class.java)
                             session.setData("login", "1")
-                            startActivity(intent)
-                            finish()
-                        } else if (registered == "false") {
-                             val intent = Intent(activity,OtpActivity::class.java)
-                            session.setData("login", "0")
                             startActivity(intent)
                             finish()
                         }

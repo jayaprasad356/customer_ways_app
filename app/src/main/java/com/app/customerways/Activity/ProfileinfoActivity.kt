@@ -114,34 +114,9 @@ class ProfileinfoActivity : BaseActivity() {
 
 
 
-                        val gender = jsonobj.getString(Constant.GENDER)
-                        val age = jsonobj.getString(Constant.AGE)
-                        binding.ivAge.text = age
-
-                        if(gender == "male") {
-                            binding.ivGender.setBackgroundDrawable(resources.getDrawable(R.drawable.male_ic))
-                        }
-                        else {
-                            binding.ivGender.setBackgroundDrawable(resources.getDrawable(R.drawable.female_ic))
-                        }
-
-                        if (gender == "male") {
-                            binding.ivGenderColor.backgroundTintList = ColorStateList.valueOf(
-                                ContextCompat.getColor(this, R.color.blue_200))
-                        } else {
-                            binding.ivGenderColor.backgroundTintList = ColorStateList.valueOf(
-                                ContextCompat.getColor(this, R.color.primary))
-                        }
-
-
-
 
 
                         binding.tvName.text = jsonobj.getString(Constant.NAME)
-                        binding.tvProfessional.text =  jsonobj.getString(Constant.PROFESSION)
-                        binding.tvCity.text = jsonobj.getString(Constant.CITY)
-                        binding.tvState.text = jsonobj.getString(Constant.STATE)
-                        binding.tvGender.text = jsonobj.getString(Constant.GENDER)
                         binding.tvUsername.text = "@"+jsonobj.getString(Constant.UNIQUE_NAME)
                         binding.tvPlace.text = jsonobj.getString(Constant.CITY) + ", " + jsonobj.getString(Constant.STATE)
 

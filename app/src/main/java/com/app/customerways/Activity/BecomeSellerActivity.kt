@@ -95,7 +95,7 @@ class BecomeSellerActivity : BaseActivity() {
 
     private fun showProfessionDialogcategory(etCategory: EditText) {
         val Category = listOf(
-            "Clothing", "Electronic", "Jewellery", "Shoes",
+            "Clothing", "Electronic", "Jewellery", "Others",
         )
         val adapter = ProfessionAdapter(Category) { selectedProfession ->
             binding.etCategory.setText(selectedProfession)

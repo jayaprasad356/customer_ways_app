@@ -64,6 +64,8 @@ dependencies {
     implementation libs.androidx.constraintlayout
     implementation libs.firebase.analytics
     implementation libs.billing.ktx
+    implementation libs.firebase.auth.ktx
+    implementation libs.firebase.crashlytics.buildtools
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
@@ -88,7 +90,6 @@ dependencies {
     // Add Firebase dependencies without specifying versions
     implementation 'com.google.firebase:firebase-crashlytics:18.2.7'
     implementation 'com.google.firebase:firebase-analytics:20.0.1'
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.firebase:firebase-database-ktx:20.0.0'
     implementation 'com.google.firebase:firebase-ml-vision:24.0.1'
     implementation 'com.google.firebase:firebase-ml-vision-face-model:19.0.0'
@@ -103,6 +104,8 @@ dependencies {
     implementation 'com.zoho.salesiq:mobilisten:7.0.0'
 
     implementation 'com.google.android.material:material:1.8.0'
+
+
 
 
     // CameraX dependencies

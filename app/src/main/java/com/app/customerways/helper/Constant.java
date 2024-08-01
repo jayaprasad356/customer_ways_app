@@ -10,7 +10,14 @@ public class Constant {
     public static final String BaseUrl = MainBaseUrl + "api/";
 
 
+    public static final  String getOTPUrl(String key,String mobile,String otp) {
+
+        return "https://api.authkey.io/request?authkey="+key+"&mobile="+mobile+"&country_code=91&sid=9214&otp="+otp+"&company=We Agri";
+    }
+
+
     public static final String REGISTER = BaseUrl + "register";
+    public static final String OTP = BaseUrl + "otp";
     public static final String PROFESSION_LIST = BaseUrl + "profession_list";
     public static final String UPDATE_USERS = BaseUrl + "update_users";
     public static final String ADD_SELLERS = BaseUrl + "add_sellers";

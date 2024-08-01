@@ -23,7 +23,6 @@ import com.app.customerways.Adapter.ChatAdapter
 import com.app.customerways.Model.ChatModel
 import com.app.customerways.R
 import com.app.customerways.databinding.ActivityChatsBinding
-import com.app.customerways.extentions.addChat
 import com.app.customerways.extentions.fetchMessages
 import com.app.customerways.extentions.logError
 import com.app.customerways.extentions.logInfo
@@ -55,7 +54,7 @@ class ChatsActivity : BaseActivity(), OnMessagesFetchedListener {
     lateinit var activity: Activity
     lateinit var session: Session
     private val firebaseDatabase: FirebaseDatabase =
-        Firebase.database("https://dudeways-c8f31-default-rtdb.asia-southeast1.firebasedatabase.app")
+        Firebase.database("https://customerways-default-rtdb.firebaseio.com/")
     private val databaseReference: DatabaseReference = firebaseDatabase.reference
     private var chatReference: DatabaseReference? = null
     private var chatAdapter: ChatAdapter? = null
@@ -172,34 +171,29 @@ class ChatsActivity : BaseActivity(), OnMessagesFetchedListener {
         fetchMessages(chatReference, this@ChatsActivity) {
             isConversationsFetching = it
         }
-        chatReference?.addChildEventListener(
-            object : ChildEventListener {
-                override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-                    val chatModel = snapshot.getValue(ChatModel::class.java)
-                    logInfo(CHATS_ACTIVITY, "from firebase child added - $chatModel")
-                    onMessageAdded(chatModel)
-                }
-
-                override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
-//                    val chatModel = snapshot.getValue(ChatModel::class.java)
-//                    logInfo(CHATS_ACTIVITY, "Child changed - $chatModel")
-//                    onMessageChanged(chatModel)
-                }
-
-                override fun onChildRemoved(snapshot: DataSnapshot) {
-                    val chatModel = snapshot.getValue(ChatModel::class.java)
-                    onMessageRemoved(chatModel)
-                }
-
-                override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
-                    TODO("Not yet implemented")
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
+        chatReference?.addChildEventListener(object : ChildEventListener {
+            override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
+                val chatModel = snapshot.getValue(ChatModel::class.java)
+                logInfo(CHATS_ACTIVITY, "from firebase child added - $chatModel")
+                onMessageAdded(chatModel)
             }
-        )
+
+            override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {}
+
+            override fun onChildRemoved(snapshot: DataSnapshot) {
+                val chatModel = snapshot.getValue(ChatModel::class.java)
+                onMessageRemoved(chatModel)
+            }
+
+            override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {}
+
+            override fun onCancelled(error: DatabaseError) {
+                // Implement error handling here
+                logError(CHATS_ACTIVITY, "Firebase child event listener was cancelled: ${error.message}")
+                makeToast("An error occurred: ${error.message}")
+            }
+        })
+
 
 
         observeTypingStatus(firebaseDatabase, receiverId)

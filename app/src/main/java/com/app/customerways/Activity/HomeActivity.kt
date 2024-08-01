@@ -349,6 +349,7 @@ class HomeActivity : BaseActivity() , NavigationBarView.OnItemSelectedListener {
                         session.setData(Constant.PROFILE_VERIFIED, jsonobj.getString(Constant.PROFILE_VERIFIED))
                         session.setData(Constant.SELLER_STATUS, jsonobj.getString(Constant.SELLER_STATUS))
 
+
                     } else {
                         Toast.makeText(activity, jsonObject.getString("message"), Toast.LENGTH_SHORT).show()
 
